@@ -1,0 +1,109 @@
+body {
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,Arial,sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #495060;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+html, body, .bui-box {
+  height: 100%;
+  overflow: hidden; }
+
+.bui-box {
+  background-color: #121a4b;
+  background-image: url("../images/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+.container {
+  position: absolute;
+  width: 500px;
+  height: 280px;
+  margin-left: -250px;
+  margin-top: -140px;
+  left: 50%;
+  top: 50%;
+  text-align: center; }
+
+.logo .title {
+  margin: 20px auto 70px auto;
+  position: relative;
+  width: 130px; }
+  .logo .title span {
+    position: absolute;
+    top: -20px;
+    right: -15px;
+    font-size: 12px;
+    color: #efa902; }
+
+.introduce-title {
+  font-size: 16px;
+  color: #bcbcbc;
+  letter-spacing: 0.1em;
+  font-weight: normal;
+  margin-bottom: 60px; }
+
+.nav {
+  display: flex; }
+  .nav li {
+    flex: 1; }
+    .nav li a {
+      font-size: 16px;
+      display: inline-block;
+      padding: 10px;
+      position: relative;
+      color: #41a2f3;
+      text-decoration: none;
+      transition: color .3s; }
+      .nav li a span {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background: url("../images/githup.png") no-repeat left center;
+        margin-right: 5px; }
+      .nav li a:before {
+        top: 0;
+        transform: translateY(-10px); }
+      .nav li a:after {
+        bottom: 0;
+        transform: translateY(10px); }
+      .nav li a:before, .nav li a:after {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #fff;
+        content: "";
+        opacity: 0;
+        transition: opacity .3s, transform .3s;
+        transform: translateY(-10px); }
+      .nav li a:hover {
+        color: #ffffff; }
+        .nav li a:hover span {
+          background: url("../images/githup-white.png") no-repeat left center; }
+      .nav li a:hover:after, .nav li a:hover:before {
+        opacity: 0.3;
+        transform: translateY(0); }
+
+.footer {
+  position: absolute;
+  width: 500px;
+  left: 50%;
+  margin-left: -250px;
+  bottom: 30px; }
+  .footer p {
+    color: #989898;
+    font-size: 12px;
+    text-align: center;
+    line-height: 22px; }
+
+.canvas-box {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 0; }
+
+/*# sourceMappingURL=index.css.map */

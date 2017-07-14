@@ -1,8 +1,9 @@
 # Summary
 
 * [BUI-Weex概述](README.md)
-* [快速入门](chapter1.md)
+* 快速入门
   * [环境搭建](huan-jing-da-jian.md)
+  * [创建工程](chuang-jian-gongcheng.md)
   * [开发调试](kai-fa-diao-shi.md)
   * [目录规范](mu-lu-gui-fan.md)
   * [开发套路](kai-fa-tao-lu.md)
