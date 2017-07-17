@@ -24,11 +24,11 @@
         </div>
         <h2 class="introduce-title">专门为weex前端开发者打造的高质量UI组件库</h2>
         <ul class="nav">
-            <li><a href="">快速入门</a></li>
-            <li><a href="http://dev.bingocc.com/buiweex/docs/">开发手册</a></li>
-            <li><a href="">案例展示</a></li>
-            <li><a href=""><span></span>GitHub</a></li>
-            <li><a href="">WEEX官网</a></li>
+            <li><a target="_blank" href="">快速入门</a></li>
+            <li><a target="_blank" href="http://dev.bingocc.com/buiweex/docs/">开发手册</a></li>
+            <li><a target="_blank" href="">案例展示</a></li>
+            <li><a target="_blank" href=""><span></span>GitHub</a></li>
+            <li><a target="_blank" href="http://weex.apache.org/cn/">WEEX官网</a></li>
         </ul>
     </div>
     <div class="footer">
@@ -137,7 +137,7 @@
             this.alpha = 1;//透明度
             this.getRandomColor();
             //最小长度，最大长度
-            var x = Math.random() * 80 + 150;
+            var x = Math.random() * 80 + 30;
             this.length = Math.ceil(x);
 //         x = Math.random()*10+30;
             this.angle = 38; //流星倾斜角
@@ -185,7 +185,7 @@
                     this.x + this.width,
                     this.y - this.height);
             //分段设置颜色
-            line.addColorStop(0, "white");
+            line.addColorStop(0, "#727694");
             line.addColorStop(0.3, this.color1);
             line.addColorStop(0.6, this.color2);
             context.strokeStyle = line;
@@ -224,7 +224,7 @@
                 rains[n].init();
             }
         }
-        setTimeout("playRains()",2);
+        setTimeout("playRains()",10);
     }
     /*流星雨结束*/
 </script>
