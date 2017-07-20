@@ -2,3 +2,6 @@
 /Library
 *log
 **/.DS_Store
+.idea
+*.css.map
+*.scss
