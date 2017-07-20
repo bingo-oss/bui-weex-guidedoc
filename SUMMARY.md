@@ -4,9 +4,10 @@
 * 快速入门
   * [环境搭建](huan-jing-da-jian.md)
   * [创建工程](chuang-jian-gongcheng.md)
-  * [开发调试](kai-fa-diao-shi.md)
   * [目录规范](mu-lu-gui-fan.md)
-  * [开发套路](kai-fa-tao-lu.md)
+  * [开发调试](kai-fa-tiao-shi.md)
+  * [页面开发](ye-mian-kai-fa.md)
+  * [打包发布](kai-fa-tao-lu.md)
 * [开发手册](kai-fa-shou-ce.md)
   * [页面结构](kai-fa-shou-ce/ye-mian-jie-gou.md)
   * [布局样式](kai-fa-shou-ce/bu-ju-yang-shi.md)

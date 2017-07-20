@@ -1,14 +1,14 @@
 # BUI-Weex概述
 
-BUI-Weex 是一套专门为[ Weex ](http://weex-project.io/cn/)前端开发者打造的一套UI框架。目前仅支持`iOS`和`android`平台，后续将针对web平台进行降级支持。
+BUI-Weex 是一套专门为[ Weex ](http://weex-project.io/cn/)前端开发者打造的一套高质量UI框架。为了达到更好的效果，请在 `WeexSDK 0.11.0 +` 上使用这套UI框架，目前仅支持`iOS`和`android`平台，后续将针对web平台进行降级支持。
 
-在阅读开发文档之前，您需要具备如下技能：
+在往下阅读开发文档之前，您需要具备如下技能：
 
 **技能一：熟悉 Weex 官方开发套路**
 
 官网  ：[http://weex-project.io/cn/](http://weex-project.io/cn/)
 
-BUI-Weex仅仅是在UI层面给予开发者提供脚手架以及常用组件，JS Module 部分需要开发者在官网寻找答案。
+BUI-Weex 仅仅是在UI层面给予开发者提供脚手架以及丰富的组件，JS Module以及内置的功能，开发者需要在官网寻找答案。
 
 **技能二：熟悉 Vue2.0 语法**
 
