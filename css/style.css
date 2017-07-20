@@ -1,0 +1,234 @@
+/* play */
+.album {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -500px;
+  margin-top: -270px;
+  width: 1000px;
+  height: 559px;
+  background: #fff;
+  border: 10px solid #FFF;
+  border-radius: 5px; }
+
+.album-image-md {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  height: 459px;
+  overflow: hidden; }
+
+.album-image-bd {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  height: 409px;
+  text-align: center;
+  overflow: hidden; }
+
+.album-image {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%; }
+
+.album-image-ft {
+  margin: 0 auto;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  overflow: hidden; }
+
+#album-image-ft {
+  font-size: 12px; }
+
+.album-image-nav {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 980px;
+  height: 409px;
+  overflow: hidden; }
+
+.album-image-nav-left-block {
+  position: relative;
+  z-index: 1;
+  float: left;
+  margin: 0;
+  width: 50%;
+  height: 409px;
+  list-style-type: none;
+  overflow: hidden; }
+
+.album-image-nav-right-block {
+  position: relative;
+  z-index: 1;
+  float: left;
+  margin: 0;
+  width: 50%;
+  height: 409px;
+  list-style-type: none;
+  overflow: hidden; }
+
+.album-image-btn-prev:link, .album-image-btn-prev:visited, .album-image-btn-prev:hover {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 0;
+  margin: -40px 0 0 0;
+  width: 32px;
+  height: 32px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  text-decoration: none;
+  text-align: center;
+  overflow: hidden; }
+
+.album-image-btn-next:link, .album-image-btn-next:visited, .album-image-btn-next:hover {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 0;
+  margin: -40px 0 0 0;
+  width: 32px;
+  height: 32px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  text-decoration: none;
+  text-align: center;
+  overflow: hidden; }
+
+.album-image-btn-prev:hover, .album-image-btn-next:hover {
+  color: #333; }
+
+.album-image-loading-overlay {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  margin-left: -100px;
+  margin-top: -100px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background-color: #fff;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  overflow: hidden; }
+
+.album-image-loading-overlay img {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  margin: -50px  0 0 -50px;
+  width: 100px;
+  height: 100px; }
+
+.album-carousel {
+  margin: 0 auto;
+  width: 980px;
+  height: 80px;
+  overflow: hidden; }
+
+.album-carousel-btn-prev:link, .album-carousel-btn-prev:visited, .album-carousel-btn-prev:hover {
+  float: left;
+  margin: 0;
+  width: 50px;
+  height: 80px;
+  line-height: 70px;
+  text-align: center;
+  font-size: 80px;
+  text-decoration: none;
+  color: #999;
+  overflow: hidden; }
+
+.album-carousel-btn-next:link, .album-carousel-btn-next:visited, .album-carousel-btn-next:hover {
+  float: right;
+  margin: 0;
+  width: 50px;
+  height: 80px;
+  line-height: 70px;
+  text-align: center;
+  font-size: 80px;
+  text-decoration: none;
+  color: #999;
+  overflow: hidden; }
+
+.album-carousel-btn-prev:hover, .album-carousel-btn-next:hover {
+  color: #F00;
+  background-color: #F4F4F4; }
+
+.album-carousel-zone {
+  position: relative;
+  z-index: 1;
+  float: left;
+  margin: 0;
+  width: 880px;
+  height: 80px;
+  background-color: #FFF;
+  overflow: hidden; }
+
+.album-carousel-list {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 1760px;
+  height: 80px;
+  overflow: hidden; }
+
+.album-carousel-thumb {
+  position: relative;
+  z-index: 3;
+  float: left;
+  margin: 0;
+  list-style-type: none;
+  width: 80px;
+  height: 80px;
+  overflow: hidden; }
+
+.album-carousel-thumb a:link, .album-carousel-thumb a:visited, .album-carousel-thumb a:hover {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  border: 3px solid #FFF;
+  overflow: hidden; }
+
+.album-carousel-thumb-selected a:link, .album-carousel-thumb-selected a:visited, .album-carousel-thumb-selected a:hover, .album-carousel-thumb a:hover {
+  border: 3px solid #F00; }
+
+.album-carousel-thumb img {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  top: -37px;
+  left: -80px;
+  width: 230px;
+  height: 144px;
+  opacity: 0.5;
+  filter: alpha(opacity=50); }
+
+.album-carousel-thumb-selected a:link img, .album-carousel-thumb-selected a:visited img, .album-carousel-thumb-selected a:hover img, .album-carousel-thumb a:hover img {
+  opacity: 1;
+  filter: alpha(opacity=100); }
+
+.hide {
+  display: none; }
+
+.close {
+  position: absolute;
+  top: -13px;
+  right: -45px;
+  cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */

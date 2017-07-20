@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>BUI-WEEX,案例展示</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<div class="bui-box-case">
+    <header class="bui-header">
+        <div class="bui-logo fl">
+            <a class="fl" href="http://dev.bingocc.com/buiweex"><img src="images/bui-weex-logo.png" alt="BUI-WEEX——专门为weex前端开发者打造的高质量UI组件库"></a>
+            <span class="fr bui-logo-title">
+                <a href="http://dev.bingocc.com/buiweex"><img src="images/bui-weex-logo-black.png" alt=""></a>
+                <a href="http://dev.bingocc.com/buiweex"><h4>打造weex高质量UI组件库</h4></a>
+            </span>
+        </div>
+        <span class="togglenav" id="togglenav"><img src="images/menu.png" alt="" width="48px"></span>
+        <div class="bui-case-nav">
+            <ul class="nav" id="nav">
+                <li><a href="http://dev.bingocc.com/buiweex">首页</a></li>
+                <li><a target="_blank" href="http://dev.bingocc.com/buiweex/docs">快速入门</a></li>
+                <li><a target="_blank" href="http://dev.bingocc.com/buiweex/docs/kai-fa-shou-ce.html">开发手册</a></li>
+                <li><a href="" class="link">案例展示</a></li>
+                <li><a target="_blank" href="https://github.com/bingo-oss/bui-weex"><span></span>GitHub</a></li>
+                <li><a target="_blank" href="http://weex-project.io">WEEX官网</a></li>
+            </ul>
+        </div>
+    </header>
+    <main class="main">
+        <div style="padding: 20px 30px">
+            <ul class="caseList">
+                <li>
+                    <img src="images/logo.png" alt="">
+                    <span>分晓</span>
+                </li>
+            </ul>
+            <div class="bui-tab-box" style="display: none">
+                <div class="layout"></div>
+                <div class="bui-tab-container">
+                    <div class="album" id="album">
+                        <span class="close"><img src="images/close.png" alt="" width="25px"></span>
+                        <div class="album-image-md" id="album-image-md">
+                            <p class="album-image-bd"><img src="images/img/s_6.jpg" class="album-image" id="album-image" alt="相册图片-示例图片（1）" width="230" height="409" /></p>
+                            <p class="album-image-ft" id="album-image-ft">示例图片（1）</p>
+                            <ul class="album-image-nav hide" id="album-image-nav">
+                                <li class="album-image-nav-left-block" id="album-image-nav-left-block"><a href="#prev-image" class="album-image-btn-prev" id="album-image-btn-prev"><img
+                                        src="images/left.png" alt="" width="32px"></a></li>
+                                <li class="album-image-nav-right-block" id="album-image-nav-right-block"><a href="#next-image" class="album-image-btn-next" id="album-image-btn-next"><img
+                                        src="images/right.png" alt="" width="32px"></a></li>
+                            </ul>
+                            <p class="album-image-loading-overlay hide" id="album-image-loading-overlay"><img src="images/loading.gif" alt="loading..." width="100" height="100" /></p>
+                        </div>
+
+                        <div class="album-carousel" id="album-carousel">
+                            <a href="#prev-group" class="album-carousel-btn-prev" id="album-carousel-btn-prev">‹</a>
+                            <div class="album-carousel-zone" id="album-carousel-zone">
+                                <ul class="album-carousel-list" id="album-carousel-list">
+                                    <li class="album-carousel-thumb album-carousel-thumb-selected"><a href="images/img/s_6.jpg"><img src="images/img/s_6.jpg" alt="相册图片-示例图片（1）" width="230" height="409" /></a></li>
+                                    <li class="album-carousel-thumb"><a href="images/img/s_5.jpg"><img src="images/img/s_5.jpg" alt="相册图片-示例图片（2）" width="230" height="409" /></a></li>
+                                    <li class="album-carousel-thumb"><a href="images/img/s_4.jpg"><img src="images/img/s_4.jpg" alt="相册图片-示例图片（3）" width="230" height="409" /></a></li>
+                                    <li class="album-carousel-thumb"><a href="images/img/s_3.jpg"><img src="images/img/s_3.jpg" alt="相册图片-示例图片（4）" width="230" height="409" /></a></li>
+                                    <li class="album-carousel-thumb"><a href="images/img/s_2.jpg"><img src="images/img/s_2.jpg" alt="相册图片-示例图片（5）" width="230" height="409" /></a></li>
+                                </ul>
+                            </div>
+                            <a href="#next-group" class="album-carousel-btn-next" id="album-carousel-btn-next">›</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer class="bui-case-footer">
+        <p>Copyright © 2013- 2017 Bingosoft.All Rights Reserved</p>
+    </footer>
+
+</div>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/carousel.js"></script>
+<script type="text/javascript" src="js/album.js"></script>
+<script type="text/javascript">
+    var Album = new jQuery.Album();
+    (function($){
+        $(".caseList li").click(function () {
+            $(".bui-tab-box").show();
+        });
+        $(".close").click(function () {
+            $(".bui-tab-box").hide();
+        });
+        $(".layout").click(function () {
+            $(".bui-tab-box").hide();
+        });
+        $("#togglenav").click(function () {
+            $("#nav").fadeToggle();
+        });
+    })(jQuery);
+</script>
+</body>
+</html>
