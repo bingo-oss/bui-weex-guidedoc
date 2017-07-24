@@ -1,18 +1,17 @@
 # Summary
 
 * [BUI-Weex概述](README.md)
-* 快速入门
+* [快速入门](kuai-su-ru-men.md)
   * [环境搭建](huan-jing-da-jian.md)
   * [创建工程](chuang-jian-gongcheng.md)
   * [目录规范](mu-lu-gui-fan.md)
   * [开发调试](kai-fa-tiao-shi.md)
   * [页面开发](ye-mian-kai-fa.md)
-  * [打包发布](kai-fa-tao-lu.md)
+  * [打包发布](da-bao-fa-bu.md)
 * [开发手册](kai-fa-shou-ce.md)
   * [页面结构](kai-fa-shou-ce/ye-mian-jie-gou.md)
   * [布局样式](kai-fa-shou-ce/bu-ju-yang-shi.md)
   * [文本样式](kai-fa-shou-ce/wen-ben-yang-shi.md)
-  * [辅助元素](kai-fa-shou-ce/fu-zhu-yuan-su.md)
   * [按钮\(bui-button\)](kai-fa-shou-ce/an-niu-ff08-bui-button.md)
   * [列表\(bui-list\)](kai-fa-shou-ce/lie-biao-ff08-bui-list.md)
   * [提示条\(bui-tip\)](kai-fa-shou-ce/ti-shi-tiao-ff08-bui-tip.md)
