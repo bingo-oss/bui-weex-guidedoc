@@ -1,85 +1,62 @@
-# 弹出层 \(bui-dialog\)
+## 弹出层 (bui-dialog)
 
-## 特性
+### 导入组件
 
-* `title` 组件标题，默认为 `标题`
+```javascript
+components: {
+    'bui-dialog': buiweex.buiDialog
+}
 
-* `buttons` 组件按钮，数据格式为字符串，默认为 `"取消,确定"`
+```
 
-* `show` 与 `v-if` 都是触发组件是否展开，值设置同一个，触发时设置值为true
+### 使用
 
+```html
+<div class="span1">
+    <bui-button value="打开窗口" @click="open"></bui-button>
+</div>
+<!--自定义Dialog-->
+<bui-dialog  @btnClick="onDialogCallback" :show="showDialog">
+    <text>欢迎使用BUI-Weex!</text>
+    <text>基于阿里weex构建的一套高质量UI框架</text>
+</bui-dialog>
 
-## 事件
+```
 
-* `@btnClick` 组件按钮事件，参考如下：
-
-  ```
-  <text @click="open()">打开弹出框</text>
-  <bui-dialog @btnClick="onDialogCallback" v-if="showDialog"></bui-dialog>
-  ```
-
-  ```js
-  methods: {
-    "open": function () {
-        this.showDialog = true;
+```javascript
+var buiweex = require("bui-weex");
+export default {
+    data: function(){
+        return {
+        	showDialog: false
+        }
     },
-    "onDialogCallback": function (text) {
-        this.showDialog = false;
-    }
-  }
-  ```
-
-* `@close` 点击组件遮罩层后触发的事件，把 `show` 的值设置为false，参考如下：
-
-  ```
-  <text @click="open()">打开弹出框</text>
-  <bui-dialog @btnClick="onDialogCallback" @close="closeDailog" v-if="showDialog"></bui-dialog>
-  ```
-
-  ```js
-  methods: {
-    "closeDailog": function () {
-        this.showDialog = false;
-    }
-  }
-  ```
-  
-## 扩展
-
-  组件里的内容可以直接加到组件作为其子组件，参考如下：
-
-  ```
-  <text @click="open()">打开弹出框</text>
-  <bui-dialog @btnClick="onDialogCallback" @close="closeDailog" v-if="showDialog">
-    <text>欢迎使用Bui-Weex!</text>
-    <text>基于阿里weex构建的一套UI框架</text>
-  </bui-dialog>
-  ```
-
-  ```js
-  methods: {
-    "open": function () {
-        this.showDialog = true;
+    components: {
+        'bui-dialog': buiweex.buiDialog
     },
-    "onDialogCallback": function (text) {
-        this.showDialog = false;
-    },
-    "closeDailog": function () {
-        this.showDialog = false;
+    methods: {
+        "open": function () {
+            this.showDialog = true;
+        },
+        "onDialogCallback": function (text) {
+            this.showDialog = false;
+            buiweex.toast(text)
+        }
     }
-  }
-  ```
+}
+
+```
 
 
+### 属性
 
+* `title` 标题文本
 
+* `buttons` 按钮组，默认为 `"取消,确定"`
 
-  
+* `show` 控制组件是否展开，触发时设置值为true，关闭时设置为false
 
+### 事件
 
-
-
-
-
-
-
+* `@btnClick` 按钮事件，可以在text中获取按钮文本
+* `@close` 点击遮罩层后触发的事件, 在这里可以关闭组件，设置 show 为false即可

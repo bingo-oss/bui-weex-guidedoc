@@ -1,48 +1,64 @@
-# 多选 \(bui-checkbox\)
+## 多选 (bui-checkbox)
 
-是表单元素，简单例子参考如下：
+表单元素多选按钮
+
+### 导入组件
+
+```javascript
+components: {
+    'bui-checkbox': buiweex.buiCheckbox
+}
 
 ```
-<template>
-    <bui-checkbox checkboxItems="items" :flexDirection="'flex-column'" @change="changeFn"></bui-checkbox>
-</template>
 
-<script>
-    module.exports = {
-        data: function(){
-            return {
-                "items": [
-                    {
-                        title: "男",         //文本
-                        disabled: true,      //表明是否激活按钮, true为激活、false为不激活、默认值为false
-                        select: true,        //表明是否是选中项, true为选中、false为不选中
-                        value: "1"
-                    },
-                    {
-                        title: "女",
-                        select: false,
-                        value: "0"
-                    }
-                ]
+### 使用
+
+```html
+<bui-checkbox :items="checkboxItems"
+   @change="checkboxChange"></bui-checkbox>
+```
+
+```javascript
+data: function () {
+    return {
+        "checkboxItems": [
+            {
+                title: "设计部",
+                select: true,
+                value: "0"
+            },
+            {
+                title: "产品部",
+                select: false,
+                value: "1"
+            },
+            {
+                title: "销售部",
+                select: false,
+                value: "2"
+            },
+            {
+                title: "行政部",
+                select: false,
+                value: "3"
             }
-        },
-        components: {
-            'bui-checkbox': require('../../components/bui-checkbox.vue')
-        },
-        methods: {
-            'changeFn': function(val){
-                console.log(val) //选中的item值
-            }
-        }
+        ]
     }
-</script>
+},
+methods: {
+	"checkboxChange": function (item, selecteArray) {
+        console.log(item); //当前选中的item
+        console.log(selecteArray); //所有选中的项
+    }
+}
+
 ```
 
-## 特性
+### 属性
 
-* `checkboxItems` **： **赋值多选组数据列表，传一个数组，单个数组的属性如下：
+* `items` 赋值多选组数据列表，传一个数组，属性如下：
 
-  * title ：多选文本
+  * title ：单选文本
 
   * disabled ：表明是否激活按钮, true为激活、false为不激活、默认值为false
 
@@ -50,12 +66,12 @@
 
   * value ：表单的value
 
-* `flexDirection` **： **多选表单组布局控制，横向为 flex-row ，纵向为 flex-colunm ；
+* `direction ` ：单选表单组布局控制，水平为 horizontal（默认),竖直为 vertical 
 
-## 事件
+### 事件
 
-* `@change` ：选中多选项时触发这个事件，事件中的event对象属性如下：
-  * title ：多选文本
+* `@change` ：选中时触发的事件，返回选中的对象 和 所有选中的对象，包含属性如下：
+  * title ：单选文本
   * disabled ：表明是否激活按钮, true为激活、false为不激活、默认值为false
   * select ：表明是否是选中项, true为选中、false为不选中
   * value ：表单的value

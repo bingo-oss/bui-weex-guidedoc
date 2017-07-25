@@ -39,15 +39,19 @@ BUI-Weex 提供的脚手架工程是在官方的基础上进行改造的，主�
 
 关键代码 (webpack.config.js):
 
-```js
-var entryPath = './src/entry';
-var entries = fs.readdirSync(entryPath).reduce(function (o, filename) {
-    var key = filename.substring(0, filename.indexOf('.'));
-    var filePath = path.resolve(entryPath + "/" + filename);
-    o[key] = filePath;
-    return o;
-}, {});
-
+```javascript
+// 遍历文件入口,动态生成入口
+function getEntries () {
+    var entryFiles = glob.sync('./src/entry/**', { 'nodir': true})
+    var entries = {};
+    for (var i = 0; i < entryFiles.length; i++) {
+        var filePath = entryFiles[i];
+        var filename = filePath.split('entry/')[1];
+        filename = filename.substr(0, filename.lastIndexOf('.'));
+        entries[filename] = filePath;
+    }
+    return entries;
+}
 ```
 
 ### 特性：支持 Sass 加载器
@@ -56,14 +60,14 @@ var entries = fs.readdirSync(entryPath).reduce(function (o, filename) {
 
 在 package.json 中配置如下依赖：
 
-```
+```javascript
  "node-sass": "^4.5.2",
  "sass-loader": "^6.0.3",
 ```
 
 在 web.config.js 中配置如下loader:
 
-```
+```javascript
 loaders: [
 	{
      test: /\.scss$/,
@@ -77,16 +81,15 @@ loaders: [
 
 在 web.config.js 中
 
-```
+```javascript
 //  文件拷贝插件,将图片拷贝到dist目录
-var CopyWebpackPlugin = require('copy-webpack-plugin')
-var copyPlugin = new CopyWebpackPlugin([
+var copyPlugin = new copy([
     {from: './src/image', to: "./image"}
 ])
 ```
 使用方式:
 
-```
+```html
 <bui-image src="/image/logo.png" width="244px" height="172px"></bui-image>
 ```
 
@@ -94,10 +97,9 @@ var copyPlugin = new CopyWebpackPlugin([
 
 框架提供了`<bui-icon>`组件，里面用到 ICONFONT 的字体文件 ttf，框架在编译阶段将其拷贝到 dist 目录。组件内部会从 dist 目录下找到 这个ttf文件。
 
-```
-//  文件拷贝插件,将ttf拷贝到dist目录
-var CopyWebpackPlugin = require('copy-webpack-plugin')
-var copyPlugin = new CopyWebpackPlugin([
+```javascript
+//  文件拷贝插件,将字体拷贝到dist目录
+var copyPlugin = new copy([
     {from: './node_modules/bui-weex/src/font', to: "./font"}
 ])
 ```
@@ -106,7 +108,7 @@ var copyPlugin = new CopyWebpackPlugin([
 
 Vue 提供了 mixins 混合的能力，它是一种灵活的复用Vue组件的方式，框架内置了mixins.js 文件，并且声明了几个几乎每个页面都会用到的组件。
 
-```
+```javascript
 var buiweex=require("bui-weex");
 var mixins = {
     data: function () {
@@ -129,6 +131,5 @@ export default mixins;
 ```
 
 app.js里面 通过 Vue.mixin(mixins) 来让每个 Vue页面具备这些能力。
-
 
 
