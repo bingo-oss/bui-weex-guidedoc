@@ -1,14 +1,15 @@
 # Summary
 
 * [BUI-Weex概述](README.md)
-* [快速入门](getstart.md)
+* 快速入门
   * [环境搭建](env.md)
   * [创建工程](project.md)
   * [目录规范](folder.md)
   * [开发调试](debug.md)
   * [页面开发](page.md)
-  * [打包发布](publish.md)
-* [开发手册](ref.md)
+  * [打包Bundle](publish.md)
+* 开发手册
+  *	 [buiweex js](reference/buiweexjs.md)
   * [页面结构](reference/pagestruct.md)
   * [布局样式](reference/layoutcss.md)
   * [文本样式](reference/textcss.md)
