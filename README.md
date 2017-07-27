@@ -48,3 +48,8 @@ Webpack是目前最流行的前端模块加载方案，在Webpack中，所有资
 
 ICONFONT是阿里提供的图标分享管理平台，BUI-Weex 里面提供的图标来源于该平台。如果内置的icon无法满足项目需求，可以在这里寻找合适的icon。具体请参考：【字体图标（bui-icon）】的扩展部分。
 
+**技能五：SASS语法**
+
+官网：[http://www.w3cplus.com/sassguide/syntax.html](http://www.w3cplus.com/sassguide/syntax.html)
+
+Sass 扩展了 CSS3，增加了规则、变量、混入、选择器、继承等等特性。Sass 生成良好格式化的 CSS 代码，易于组织和维护。

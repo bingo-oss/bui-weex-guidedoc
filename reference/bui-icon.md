@@ -1,10 +1,22 @@
-# 字体图标 \(bui-icon\)
+## 字体图标 \(bui-icon\)
+
+### 导入组件
+如果发现src/mixins.js 已经引入了该组件，则无需再次引入。
+
+```javascript
+components: {
+    'bui-icon': buiweex.buiIcon
+}
+
+```
+
+### 使用
 
 注意：该组件在mixins里已经引入，用时勿再引。
 
 目前已有221个字体图标，key，value格式，value是字体图标对应的unicode，图标列表如下：
 
-```
+```javascript
 "icon-appreciate": "&#xe644;",
 "icon-appreciatefill": "&#xe6e3",
 "icon-check": "&#xe645;",
@@ -40,54 +52,54 @@
 
 使用时设置的`name`值是上图对应的key，参考如下：
 
-```
+```html
 <bui-icon name="icon-search"></bui-icon>
 ```
 
-## 颜色设置
+### 颜色设置
 
 组件支持设置color属性，默认颜色是深灰色'\#9ea7b4'，参考如下：
 
-```
+```html
 <bui-icon name="icon-search" color="red"></bui-icon>
 ```
 
-## 大小设置
+### 大小设置
 
 组件支持设置size属性，默认大小是'40px'，参考如下：
 
-```
+```html
 <bui-icon name="icon-search" size="60px"></bui-icon>
 ```
 
-## 可添加样式类
+### 可添加样式类
 
 组件支持设置类class，参考如下：
 
-```
+```html
 <bui-icon name="icon-search" size="60px" class="margin10"></bui-icon>
 ```
 
-## 横向字体图标排列
+### 横向字体图标排列
 
 需要在外层增加`flex-row`使其水平铺开，相反纵向在外层加`flex-column`
 
-```
+```html
 <div class="flex-row">
      <bui-icon name="icon-search" size="60px"></bui-icon>
      <bui-icon name="icon-search" size="60px"></bui-icon>
 </div>
 ```
 
-## 字体图标事件
+### 字体图标事件
 
 按钮支持：点击事件@click
 
-```
+```html
 <bui-icon name="icon-search" size="60px" class="margin10" @click="iconEvent($event)"></bui-icon>
 ```
 
-```js
+```javascript
 methods: {
    "iconEvent": function (event) { 
         //todo;
@@ -95,7 +107,7 @@ methods: {
 }
 ```
 
-## 扩展组件
+### 扩展组件
 
 参照bui-icon组件另外创建一个，注意事项有2个，如下：
 
