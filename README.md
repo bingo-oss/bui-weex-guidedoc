@@ -2,6 +2,15 @@
 
 BUI-Weex 是一套专门为[ Weex ](http://weex-project.io/cn/)前端开发者打造的一套高质量UI框架。为了达到更好的效果，请在 `WeexSDK 0.11.0 +` 上使用这套UI框架，目前仅支持`iOS`和`android`平台，后续将针对web平台进行降级支持。
 
+## 工具集
+
+BUI-Weex 提供了一系列的开源工具集，包括：
+
+*  [bui-weex](https://www.npmjs.com/package/bui-weex) 组件库: 托管在NPM上。bui-weex 是以 node_module 的方式存在的，更新组件库需要修改 package.json 版本号。该组件库可以独立使用，配合weex的工程即可，推荐使用我们提供的脚手架工程。
+*  [bui-weex-toolkit](https://www.npmjs.com/package/bui-weex-toolkit) 命令行工具：托管在NPM上。需要安装到全局。该工具可以通过命令行快速创建脚手架工程和查看最新的脚手架工程。
+*  [bui-weex-template](https://github.com/bingo-oss/bui-weex-template) 脚手架工程：基于weex官方的工程改造的，配合`bui-weex`组件库可以发挥更强的威力。托管在github上，下载即可使用。推荐使用 toolkit 来创建。
+
+`bui-weex-toolkit` 和 `bui-weex-template` 对于weex开发者来说是可选的。
 
 ## 沟通交流
 
@@ -19,6 +28,10 @@ bui-weex-template脚手架工程 [https://github.com/bingo-oss/bui-weex-template
 欢迎大家给我们提 issue ：[https://github.com/bingo-oss/bui-weex/issues](https://github.com/bingo-oss/bui-weex/issues)
 
 感谢理解与支持！
+
+## 示例预览
+
+![](images/preview.gif)
 
 ## 阅读之前
 

@@ -4,14 +4,16 @@
 
 ### bui-weex 
 
-#### v1.0.0-rc1(已发布)
+v0.1.10 （latest release）
 
 ### bui-weex-toolkit
 
-#### v1.0.0
+v1.0.0（latest release）
 
 ### bui-weex-template
 
-#### v1.0.0
+v1.0.1（latest release）
+
+
 
 
