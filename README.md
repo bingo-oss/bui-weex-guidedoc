@@ -12,6 +12,14 @@ BUI-Weex 提供了一系列的开源工具集，包括：
 
 `bui-weex-toolkit` 和 `bui-weex-template` 对于weex开发者来说是可选的。
 
+## 示例预览
+请使用Playground扫描下面二维码即可查看效果：
+
+![](images/qrcode.png)
+
+![](images/preview.gif)
+
+
 ## 沟通交流
 
 **我们的GitHub仓库**
@@ -29,9 +37,6 @@ bui-weex-template脚手架工程 [https://github.com/bingo-oss/bui-weex-template
 
 感谢理解与支持！
 
-## 示例预览
-
-![](images/preview.gif)
 
 ## 阅读之前
 
