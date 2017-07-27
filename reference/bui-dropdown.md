@@ -75,6 +75,8 @@ export default {
 
 * `center` 组件下拉菜单是否在中间，默认为false
 
+* `autowidth` 默认true，宽度按触发元素宽度自适应，如果控制宽度可设置为false，宽度为260px
+
 * `show` 组件是否显示，触发时设置值为true 即会显示出下拉框，关闭时设置成false
 
 * `ref` dom id
