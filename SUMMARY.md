@@ -31,6 +31,7 @@
   * [滑动菜单\(bui-slider-bar\)](reference/bui-slider-bar.md)
   * [懒加载组件\(bui-layzy-render\)](reference/bui-layzy-render.md)
   * [图片轮播\(bui-image-slider\)](reference/bui-image-slider.md)
+* [已有项目集成 BUI-Weex](integration.md)
 * [更新日志](roadmap.md)
 * [常见问题](faq.md)
 

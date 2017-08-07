@@ -13,7 +13,7 @@ BUI-Weex 提供了一系列的开源工具集，包括：
 `bui-weex-toolkit` 和 `bui-weex-template` 对于weex开发者来说是可选的。
 
 ## 示例预览
-请使用Playground扫描下面二维码即可查看效果：
+请使用[Playground](https://weex-project.io/cn/playground.html)扫描下面二维码即可查看效果 (Playground是weex提供的安装在手机端的调试工具)：
 
 ![](images/qrcode.png)
 
