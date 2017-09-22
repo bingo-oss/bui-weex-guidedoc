@@ -8,6 +8,7 @@
   * [开发调试](debug.md)
   * [页面开发](page.md)
   * [打包Bundle](publish.md)
+  * [LinkIDE 开发者工具](linkide.md)
 * 开发手册
   *	 [buiweex js](reference/buiweexjs.md)
   * [页面结构](reference/pagestruct.md)
