@@ -1,17 +1,6 @@
-## 标题栏 \(bui-header\)
+## 头部 \(bui-header\)
 
-页面布局的标题栏。
-### 导入组件
-
-```javascript
-components: {
-    'bui-header': buiweex.buiHeader
-}
-```
-
-### 使用
-
-`bui-header`可以设置标题栏文字，左右两边元素，并且给它们添加对应的事件
+### 用法
 
 ```html
 <bui-header title="标题栏" :leftItem="leftItem" :rightItem="rightItem" 
@@ -20,7 +9,6 @@ components: {
 ```
 
 ```javascript
-var buiweex = require("bui-weex");
 export default {
     data: function () {
         return {
@@ -34,14 +22,13 @@ export default {
     },
     methods: {
         "back": function () {
-            buiweex.pop();
-            buiweex.toast('left')
+            this.$pop();
         },
         "rightclick": function () {
-            buiweex.toast('right')
+            this.$toast('right')
         },
         "centerclick": function () {
-            buiweex.toast('center')
+            this.$toast('center')
         }
     }
 }
@@ -50,57 +37,33 @@ export default {
 
 ### 属性
 
-* `title` 标题栏中间的文本。
-* `leftItem`|`rightItem` 标题栏左侧\右侧内容，是一个对象` {icon:''、 text:''}`，icon和text选择其一即可，如果两个都写了将会`从左到右`排列开来。
-* `styleEx` 扩展容器样式风格，例如修改背景颜色参考如下：
+| Prop | Type | Required | Default | Description |
+| ---- |:----:|:---:|:-------:| :----------:|
+| **`title`** | `string` | `N` |  | 标题文本 |
+| **`leftItem`** | `object` | `N` | defaultItem | 左边显示内容|
+| **`rightItem`** | `object` | `N` | defaultItem | 右边显示内容|
+| **`textColor`** | `string` | `N` | `#ffffff` | 字体颜色 |
+| **`iconColor`** | `string` | `N` | `#ffffff` | 图标颜色 |
+| **`iconSize`** | `string` | `N` | `48px` | 图标大小|
+| **`backgroundColor`** | `string` | `N` | `#4ca4fe` | 背景颜色 |
+| **`height`** | `string` | `N` | `90px` | 头部高度 |
 
-	```javascript
-	data: function () {
-	        return {
-	            myStyle: { 'background-color': '#ff4e24'}
-	        }
-	}
-	```
-	```html
-	<bui-header :ios=false title="标题栏" :styleEx="myStyle">
-    </bui-header>
-	
-	```
-
-* `ios` 是否适配iOS的状态栏(多30px)，默认是`true` 会适配，`false`是不适配，参考如下：
-
-  ```html
-  <bui-header title="标题栏" ios="false"></bui-header>
-  ```
+defaultItem = `{ icon: '',text: ''}` ,其中 icon 是字体图标的name，从ionicons寻找合适的进行填充，text是文本内容，例如'返回'，icon在左，text在右。
 
 ### 事件
 
-* `@leftClick` 是点击标题栏左侧 `leftItem` 触发的事件，参考如下：
+支持 `@leftClick`（左） `@rightClick`（右） `@centerClick`（中） 事件
 
-  ```html
-  <bui-header title="头部" ios="false" @leftClick="left">  </bui-header>
-  ```
-
-  ```javascript
-  methods: {
-    "left": function(event){
-      console.log(event)
-    }
-  }
-  ```
-
-* `@rightClick` 是点击标题栏右侧 `rightItem` 触发的事件，用法如 `@leftClick`。
-
-* `@centerClick` 是点击标题栏中间标题 `title` 触发的事件，用法如 `@leftClick`。
 
 ### 扩展
 
-标题栏左右侧需加多个内容时，可以添加子元素，左右边的内容用 `slot` 区分，`right` 是右侧 ，`left` 是左侧，参考如下：
+标题栏左中右需要自定义内容时，可通过 `slot` 区分，`right` 是右侧 ，`left` 是左侧, `center` 中间，参考如下：
 
 ```html
-<bui-header title="头部">
-    <bui-icon slot="left" name="icon-search" size="45px" color="#ffffff" class="pdl10"></bui-icon>
-    <bui-icon slot="right" name="icon-search" size="45px" color="#ffffff" class="pdl10"></bui-icon>
+<bui-header title="">
+    <div slot="center">
+    ...
+    </div>
 </bui-header>
 ```
 

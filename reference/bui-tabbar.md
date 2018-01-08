@@ -1,57 +1,33 @@
 ## 选项卡(bui-tabbar)
-选项卡组件属于高级组件，要实现选项卡效果，需要使用 `bui-tabbar`, `bui-tabbar-item` 配合 `slider` 组件一起使用。
 
-###导入组件
+### 用法
 
-```javascript
-components: {
-    "bui-tabbar": buiweex.buiTabbar,
-    "bui-tabbar-item": buiweex.buiTabbarItem
-}
-```
-
-### 使用
-
-选项卡的实现使用方式：bui-tabbar + bui-tabbar-item + slider
-
-优点：充分利用slider的滑动特性。
+选项卡的实现使用方式：bui-tabbar + slider，充分利用slider的滑动特性。
 
 实现：
-* slider的index属性和 change事件配合 与bui-tabbar进行联动 ; 
-* bui-tabbar-item表示每个选项内容区域，通过currentTab来控制当前显示哪个选项 ; 
+
+* bui-tabbar 通过控制 currentTab(v-model)索引来实现选中效果。
+* slider 通过 `@change`事件改变 index 和 currentTab 实现联动。
 * 要实现底部选项卡，只需要将 bui-tabbar 和 slider 区域对调即可;
 
+html关键代码如下:
 
 ```html
-<!--选项部分-->
-<bui-tabbar
-    :tabItems="tabItems"
-    :currentTab="currentTab"
-    showSelectedLine="true"
-    @load="onTabLoad"
-    @itemClick="onTabItemClick">
-</bui-tabbar>
+<bui-tabbar :tabItems="tabItems" showSelectedLine=true @change="onItemChange" v-model="currentTab"></bui-tabbar>
 
-<!--内容部分-->
-<slider class="slider" :index="index" auto-play="false" @change="change($event)">
-    <!--选项卡内容-->
-    <bui-tabbar-item tabId="tab1" :currentTab="currentTab">
-        <scroller style="width: 750px;flex: 1">
-            <div>
-                <text v-for="i in 100">选项卡{{i}}</text>
-                <text>我是滚动的内容</text>
-            </div>
-        </scroller>
-    </bui-tabbar-item>
-    <bui-tabbar-item tabId="tab2" :currentTab="currentTab">
-        <text>选项卡2</text>
-    </bui-tabbar-item>
-    <bui-tabbar-item tabId="tab3" :currentTab="currentTab">
-        <text>选项卡3</text>
-    </bui-tabbar-item>
-    <bui-tabbar-item tabId="tab4" :currentTab="currentTab">
-        <text>选项卡4</text>
-    </bui-tabbar-item>
+<slider class="slider" @change="onSliderChange" :index="currentTab">
+    <div class="slider-item">
+       <text class="h1">tab0</text>
+    </div>
+    <div class="slider-item">
+        <text class="h1">tab1</text>
+    </div>
+    <div class="slider-item">
+        <text class="h1">tab2</text>
+    </div>
+    <div class="slider-item">
+        <text class="h1">tab3</text>
+    </div>
 </slider>
 
 ```
@@ -59,56 +35,43 @@ components: {
 JS关键代码如下：
 
 ```javascript
-var buiweex = require("bui-weex");
 module.exports = {
     data: function () {
         return {
-            //当前选择的tab
-            currentTab: "tab1",
-            index:1,
+            leftItem: {
+                icon: 'ion-chevron-left'
+            },
+            currentTab:1,
             tabItems: [
                 {
-                    tabId: "tab1",
                     title: "首页",
-                    icon: "icon-home"
+                    icon: "ion-home"
                 },
                 {
-                    tabId: "tab2",
-                    icon: "icon-liwu",
-                    title: "动态"
+                    icon: "ion-planet",
+                    title: "探索"
                 },
                 {
-                    tabId: "tab3",
-                    icon: "icon-user",
-                    title: "我的"
+                    icon: "ion-ios-cart",
+                    title: "商城"
                 },
                 {
-                    tabId: "tab4",
-                    icon: "icon-video",
-                    title: "直播"
+                    icon: "ion-ribbon-a",
+                    title: "奖励"
                 }
             ]
         }
     },
-    components: {
-        "bui-tabbar": buiweex.buiTabbar,
-        "bui-tabbar-item": buiweex.buiTabbarItem
-    },
     methods: {
-        //选项卡加载完成事件,必须实现
-        "onTabLoad": function (tabId, index) {
-            this.currentTab = tabId;
-            this.index=index;
+        back() {
+            this.$pop();
         },
-        //选项卡点击事件,必须实现
-        "onTabItemClick": function (e, tabId, index) {
-            this.currentTab = tabId;
-            this.index = index;
+        onItemChange(index){
+
         },
-        //slider 在改变的时候
-        "change": function (e) {
-            this.index = e.index;
-            this.currentTab = this.tabItems[index].tabId;
+        onSliderChange(e){
+            var index = e.index;
+            this.currentTab=index;
         }
     }
 }
@@ -116,45 +79,23 @@ module.exports = {
 
 ### 属性
 
-**bui-tabbar 组件**
-
-* tabItems 选项卡数据（数组），每个item包含 tabId, icon, title 字段。
-* currentTab 当前选中的tab，主要用于与内容项进行联动
-* height 选项卡高度，默认100px
-* iconSize 选项卡图标大小，默认45px
-* titleSize 选项卡文字大小，默认22px
-* background 选项卡背景颜色，默认#f7f7f7
-* selectedBackground 选项卡选中后的背景颜色，默认#f7f7f7
-* normalColor 选项卡文字和图标颜色，默认#818181
-* selectedColor 选项卡文字和图标选中后的颜色，默认#4ca4fe
-* containerStyle 选项卡容器扩展样式
-* itemStyle 选项卡Item扩展样式
-* showSelectedLine 选项卡选中后是否显示底部的border，默认不显示，它的颜色和selectedColor保持一致
-
-**bui-tabbar-item 组件**
-
-* tabId  当前item的id
-* currentTab 当前选中的item
+| Prop | Type | Required | Default | Description |
+| ---- |:----:|:---:|:-------:| :----------:|
+| **`tabItems `** | `array` | `Y` |  | 选项卡数据（数组），每个item应包含 icon, title 字段 |
+| **`value`** | `number` | `Y` |  | 索引,外部使用 v-model |
+| **`height`** | `string` | `N` | `100px` | 高度 |
+| **`iconSize`** | `string` | `N` | `45px` | 图标大小 |
+| **`titleSize`** | `string` | `N` | `22px` | 字体大小 |
+| **`background`** | `string` | `N` | `#f7f7f7` | 背景颜色 |
+| **`selectedBackground`** | `string` | `N` | `#f7f7f7` | 选中的背景颜色 |
+| **`normalColor`** | `string` | `N` | `#818181` | 文字图标默认颜色 |
+| **`selectedColor`** | `string` | `N` | `#4ca4fe` | 文字图标选中的颜色 |
+| **`borderBottomColor`** | `string` | `N` | `#4ca4fe` | 底部边框颜色 |
+| **`showSelectedLine`** | `bool` | `N` | false | 选中项底部显示边框 |
+| **`containerStyle`** | `object` | `N` |  | 外层容器扩展样式 |
+| **`itemStyle`** | `object` | `N` |  | 每个item扩展样式 |
 
 
 ### 事件
 
-**bui-tabbar 组件**
-
-* @onTabLoad 选项卡加载完成事件，必须实现
-
-  ```javascript
-     "onTabLoad": function (tabId, index) {
-         this.currentTab = tabId;
-         this.index=index;
-     }
-  ```
-  
-* @onTabItemClick 选项卡点击事件,必须实现
-
-  ```javascript
-     "onTabItemClick": function (e, tabId, index) {
-        this.currentTab = tabId;
-        this.index = index;
-    }
-  ```
+支持 `@change`事件，返回当前选中 item 的 index

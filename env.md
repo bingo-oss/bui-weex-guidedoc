@@ -19,6 +19,7 @@ bui-weex -v // 查看当前toolkit版本
 bui-weex -h // 命令帮助信息
 bui-weex create <projectName> [version] // 创建bui-weex示例工程，可以指定模版版本
 bui-weex list // 显示可用的版本
+bui-weex list-template // 显示模版工程里可用的模版
 
 ```
 更新工具：

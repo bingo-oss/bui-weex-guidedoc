@@ -1,15 +1,6 @@
 ## 图片 \(bui-image\)
 
-### 导入组件
-
-```javascript
-components: {
-   'bui-image': buiweex.buiImage
-}
-```
-
-### 使用
-如果使用bui-weex的脚手架工程，你会发现在 `src/js/mixins.js`已经引入了该组件，如果未引入，请按照上面的方式自行导入。weex中图片需要明确指定 width 和 height，否则图片无法显示,bui-image也不例外。
+### 用法
 
 加载远程图片
 
@@ -25,38 +16,17 @@ components: {
 
 ### 属性
 
-* `src` ：图片地址path，可以是远程地址，也可以是工程目录的图片（固定放在`src/image`目录下）
-* `width` ：图片宽度，带上单位,例如 200px
-* `height` ：图片高度，带上单位,例如 200px
-* `placeholder` ：设置默认图片，一般src的图片加载失败或者没有赋值，会显示此图片
-* `radius` ：设置图片圆角，例如 radius="50px"
+| Prop | Type | Required | Default | Description |
+| ---- |:----:|:---:|:-------:| :----------:|
+| **`width`** | `string` | `Y` |  | 宽度 |
+| **`height`** | `string` | `Y` |  | 高度|
+| **`src`** | `string` | `Y` |  | 图片路径，支持/src/image下的图片 和远程图片 |
+| **`resize`** | `string` | `N` | `stretch` | |
+| **`placeholder`** | `string` | `N` |  | 默认图片，加载失败时候显示的图片|
+| **`radius`** | `string` | `N` | `0px` | 图片圆角|
 
 ### 事件
 
-* `@load` 图片加载完成时触发。目前在仅仅在Android、iOS 上支持。
+支持 `@click` 事件
 
-  ```html
-  <bui-image width="200px" height="200px" @load="onLoad" src="/image/demo.png"></bui-image>
-  ```
-
-  ```javascript
-  methods: {
-      "onLoad": function () {
-          console.log("image load finished.");
-      }
-  }
-  ```
-
-* `@click` 点击图片时触发的事件
-
-  ```html
-  <bui-image width="200px" height="200px" @click="imageFn" src="/image/demo.png"></bui-image>
-  ```
-
-  ```javascript
-  methods: {
-    "imageFn": function () {
-        console.log("image click.");
-    }
-  }
-  ```
+支持 `@load` 事件，图片加载完成时候触发

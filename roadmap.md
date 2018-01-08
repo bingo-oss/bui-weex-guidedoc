@@ -4,15 +4,15 @@
 
 ### bui-weex 
 
-v0.1.10 （latest release）
+v0.2.0 （latest release）
 
 ### bui-weex-toolkit
 
-v1.0.0（latest release）
+v1.1.0（latest release）
 
 ### bui-weex-template
 
-v1.0.1（latest release）
+v1.0.4（latest release）
 
 
 

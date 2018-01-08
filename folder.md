@@ -5,7 +5,6 @@ BUI-Weex 提供的脚手架工程是在官方的基础上进行改造的，主�
 * 支持 Sass 加载器
 * 支持加载工程目录下图片资源
 * 支持加载 ttf 字体图标文件
-* 内置 mixins.js 文件
 
 先来看看目录结构，然后再逐个分析实现的机制！
 
@@ -17,12 +16,11 @@ BUI-Weex 提供的脚手架工程是在官方的基础上进行改造的，主�
 	* dist —— webpack打包生成的目录，包含js,image,ttf等
 	* node_modules —— 工程依赖的npm package
 	* src —— 业务代码
-		* entry —— 放置webpack的入口
+		* entry —— 放置webpack的入口，多个入口就放在这里
 			* app.js —— 入口文件
 		* image —— 放置图片资源
 			* logo.png —— 内置logo图片 
 		* js —— 放置js公共代码目录
-			* mixins.js —— vue官方的全局性文件
 		* views —— 放置视图页面
 			* app.vue —— 对应app.js的视图页面 
 	* .babelrc —— 支持ES6语法的配置文件，删除后无法使用ES6
@@ -103,33 +101,3 @@ var copyPlugin = new copy([
     {from: './node_modules/bui-weex/src/font', to: "./font"}
 ])
 ```
-
-### 特性：内置 mixins.js 文件
-
-Vue 提供了 mixins 混合的能力，它是一种灵活的复用Vue组件的方式，框架内置了mixins.js 文件，并且声明了几个几乎每个页面都会用到的组件。
-
-```javascript
-var buiweex=require("bui-weex");
-var mixins = {
-    data: function () {
-        return {}
-    },
-    components: {
-        'bui-header':buiweex.buiHeader,
-        'bui-content':buiweex.buiContent,
-        'bui-content-scroll': buiweex.buiContentScroll,
-        'bui-icon': buiweex.buiIcon,
-        'bui-button': buiweex.buiButton,
-        'bui-image':buiweex.buiImage
-    },
-    methods: {
-
-    }
-}
-
-export default mixins;
-```
-
-app.js里面 通过 Vue.mixin(mixins) 来让每个 Vue页面具备这些能力。
-
-
