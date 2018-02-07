@@ -13,6 +13,7 @@
 <bui-button type="text" value="Text Button"></bui-button>
 
 ```
+Example: [bui-button](https://github.com/bingo-oss/bui-weex-sample/blob/master/src/views/example/button-demo.vue)
 
 ### 属性
 

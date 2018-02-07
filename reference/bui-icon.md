@@ -7,7 +7,7 @@
 ```html
 <bui-icon name="ion-ios-bell" size=60></bui-icon>
 ```
-
+Example:[bui-icon](https://github.com/bingo-oss/bui-weex-sample/blob/master/src/views/example/icon-demo.vue)
 ### 属性
 
 | Prop | Type | Required | Default | Description |

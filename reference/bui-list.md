@@ -2,6 +2,8 @@
 
 框架中没有将列表封装成`component`，而是以样式的方式提供出来给开发者使用。Weex基于 list组件和 cell组件能够创建平滑的列表效果。请参考weex官方文档: [【list】](http://weex-project.io/cn/references/components/list.html)[【cell】](http://weex-project.io/cn/references/components/cell.html)[【refresh】](http://weex-project.io/cn/references/components/refresh.html)[【loading】](http://weex-project.io/cn/references/components/loading.html)
 
+Example:[bui-list](https://github.com/bingo-oss/bui-weex-sample/blob/master/src/views/example/list-demo-pullrefresh.vue)
+
 ### 基础结构
 
 ```html

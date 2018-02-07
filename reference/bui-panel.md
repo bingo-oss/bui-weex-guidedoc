@@ -19,6 +19,7 @@
 
 ```
 
+Example:[bui-panel](https://github.com/bingo-oss/bui-weex-sample/blob/master/src/views/example/panel-demo.vue)
 
 ### 属性
 

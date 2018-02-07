@@ -1,4 +1,4 @@
-## 头部 \(bui-header\)
+## 标题栏 \(bui-header\)
 
 ### 用法
 
@@ -34,6 +34,8 @@ export default {
 }
 
 ```
+Example:[bui-header](https://github.com/bingo-oss/bui-weex-sample/blob/master/src/views/example/header-demo.vue)
+
 
 ### 属性
 
@@ -66,6 +68,3 @@ defaultItem = `{ icon: '',text: ''}` ,其中 icon 是字体图标的name，从io
     </div>
 </bui-header>
 ```
-
-
-

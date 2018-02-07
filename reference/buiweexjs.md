@@ -107,3 +107,12 @@ var buiweex = require("bui-weex");
  */
 ```
 
+### this.$isIPhoneX
+
+```javascript
+/**
+ * 判断是否是 iphone x
+ * @return {*|boolean}
+ */
+```
+

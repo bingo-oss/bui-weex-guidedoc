@@ -13,6 +13,7 @@
 ```html
 <bui-image src="/image/demo.png" width="300px" height="300px"></bui-image>
 ```
+Example:[bui-image](https://github.com/bingo-oss/bui-weex-sample/blob/master/src/views/example/image-demo.vue)
 
 ### 属性
 
@@ -27,6 +28,6 @@
 
 ### 事件
 
-支持 `@click` 事件
+* `@click` 图片点击事件
 
-支持 `@load` 事件，图片加载完成时候触发
+* `@load` 图片加载完成事件

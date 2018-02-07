@@ -77,6 +77,8 @@ module.exports = {
 }
 ```
 
+Example: [bui-tabbar](https://github.com/bingo-oss/bui-weex-sample/blob/master/src/views/example/tabbar-demo.vue)
+
 ### 属性
 
 | Prop | Type | Required | Default | Description |
