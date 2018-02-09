@@ -24,7 +24,8 @@ module.exports = {
         //'emphasize',            //https://plugins.gitbook.com/plugin/emphasize
         'cuav-chapters',
         "terminal",
-        'back-to-top-button'
+        'back-to-top-button',
+        "copy-code-button"
     ],
 
     pluginsConfig: {
