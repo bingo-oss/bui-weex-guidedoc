@@ -5,3 +5,5 @@
 .idea
 *.css.map
 *.scss
+
+package-lock.json

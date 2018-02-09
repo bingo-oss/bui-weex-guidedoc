@@ -93,7 +93,7 @@ var copyPlugin = new copy([
 
 ### 特性：支持加载 ttf 字体图标文件
 
-框架提供了`<bui-icon>`组件，里面用到 ICONFONT 的字体文件 ttf，框架在编译阶段将其拷贝到 dist 目录。组件内部会从 dist 目录下找到 这个ttf文件。
+框架提供了`<bui-icon>`组件，里面用到 [ionicons](http://ionicons.com/) 的字体文件 ttf，框架在编译阶段将其拷贝到 dist 目录。组件内部会从 dist 目录下找到 这个ttf文件。
 
 ```javascript
 //  文件拷贝插件,将字体拷贝到dist目录

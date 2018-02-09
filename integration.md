@@ -1,24 +1,27 @@
-## 已有项目集成 BUI-Weex
+## Weex项目集成 BUI-Weex
 
 对于已经创建好的 Weex项目，使用我们的UI框架也是比较方便的。请按照如下步骤进行：
 
 ### 第一步:修改package.json
-以下有标注`--add`的地方，需要新增，其他可以根据需要调整版本，例如可以使用最新的 vue 2.4.2，修改完成后 运行`npm install` 并确保其正常安装。
+以下有标注的地方需要新增，其他可以根据需要调整版本，例如可以使用最新版的vue，修改完成后 运行`npm install` 并确保其正常安装。
 
 ```javascript
  "scripts": {
-    "start": "npm run serve & npm run dev", --add optional //用于合并dev和serve命令
+    "start": "npm run serve & npm run dev", //添加[可选] 用于合并dev和serve命令
     "dev": "webpack --watch",
     "serve": "node build/init.js && serve -p 8686",
     "debug": "weex-devtool",
-    "publish": "node build/publish.js", --add optional //用于打包bundel js到 publish目录
+    "publish": "node build/publish.js", //添加[可选] 用于打包bundel js到 publish目录
     "build": "webpack"
   },
   "dependencies": {
-    "glob": "^7.1.2", --add //用于文件操作
-    "vue": "^2.4.2", //使用最新的vue
-    "vue-template-compiler": "^2.4.2", //vue 2.4.2 需要它支持
+    "archiver": "^2.1.0",  //添加[可选] publish的时候压缩文件操作
+    "bui-weex": "^0.2.2", //添加 核心库
+    "glob": "^7.1.2", //添加 webpack中遍历入口时使用
+    "punycode": "^2.1.0",
+    "vue": "^2.5.13",  //可选择最新的版本
     "vue-router": "^2.1.1",
+    "vue-template-compiler": "^2.5.13", //vue 需要它
     "vuex": "^2.1.1",
     "vuex-router-sync": "^4.0.1",
     "weex-vue-render": "^0.11.2"
@@ -27,12 +30,12 @@
     "babel-core": "^6.20.0",
     "babel-loader": "^6.2.9",
     "babel-preset-es2015": "^6.18.0",
-    "bui-weex": "^0.1.10", --add  //bui-weex组件库
-    "copy-webpack-plugin": "^4.0.1", --add  //用于文件操作
+    "copy-webpack-plugin": "^4.0.1",  //添加  webpack拷贝文件的插件
     "css-loader": "^0.26.1",
     "ip": "^1.1.4",
-    "node-sass": "^4.5.2",  --add //用于支持Sass
-    "sass-loader": "^6.0.3", --add //用于支持Sass
+    "json-loader": "^0.5.7",
+    "node-sass": "^4.5.2",  //添加  支持Sass
+    "sass-loader": "^6.0.3", //添加  支持Sass
     "serve": "^1.4.0",
     "vue-loader": "^10.0.2",
     "webpack": "^1.14.0",

@@ -24,7 +24,7 @@
   * [选项卡\(bui-tabbar\)](reference/bui-tabbar.md)
   * [单元格\(bui-cell\)](reference/bui-cell.md)
   * [单选\(bui-radio\)](reference/bui-radio.md)
-  * [多选\(bui-checkbox\)](reference/bui-checkbox.md)
+  * [复选\(bui-checkbox\)](reference/bui-checkbox.md)
   * [下拉菜单\(bui-dropdown\)](reference/bui-dropdown.md)
   * [上拉菜单\(bui-actionsheet\)](reference/bui-actionsheet.md) 
   * [弹出框\(bui-dialog\)](reference/bui-dialog.md)
@@ -32,8 +32,7 @@
   * [懒加载\(bui-layzy-render\)](reference/bui-layzy-render.md)
   * [图片轮播\(bui-image-slider\)](reference/bui-image-slider.md)
   * [富文本\(bui-richcell\)](reference/bui-richcell.md)
-
-* [已有项目集成 BUI-Weex](integration.md)
-* [更新日志](roadmap.md)
+* 版本升级
+  * [0.2.X](update/0.2.X.md) 
+* [Weex项目集成 BUI-Weex](integration.md)
 * [常见问题](faq.md)
-
