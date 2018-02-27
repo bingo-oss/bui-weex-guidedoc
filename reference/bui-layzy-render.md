@@ -1,29 +1,24 @@
-## 懒加载组件 \(bui-layzy-render\)
+## 懒加载组件 \(bui-lazy-render\)
 
-### 导入组件
-
-```javascript
-components: {
-    'bui-lazy-render': buiweex.buiLazyRender
-}
-
-```
-
-### 使用
+### 用法
 
 ```html
-<bui-lazy-render time='1000'>
-    <bui-panel title="延迟1s出来" type="primary" border="1">
-        <text>我是延迟加载的内容</text>
+ <bui-lazy-render time=1000>
+    <bui-panel title="延迟1s出来" type="warning" border="1">
+        <bui-image style="width: 260px;height: 260px;" src="/image/demo.png"></bui-image>
     </bui-panel>
 </bui-lazy-render>
 
 ```
 
+Example: [bui-lazy-render](https://github.com/bingo-oss/bui-weex-sample/blob/master/src/views/example/lazy-render-demo.vue)
+
 ### 属性
 
-* `tip` 组件延迟加载的提示文本，默认为 `正在渲染,请稍候`
-* `time` 组件的延迟加载的时间，单位是ms
+| Prop | Type | Required | Default | Description |
+| ---- |:----:|:---:|:-------:| :----------:|
+| **`tip `** | `string` | `N` | `正在渲染,请稍候` | 提示文本 |
+| **`time`** | `number` | `N` | `10` | 单位ms |
 
 ### 事件
 

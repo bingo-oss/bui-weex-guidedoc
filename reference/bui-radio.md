@@ -1,69 +1,50 @@
 ## 单选 (bui-radio)
 
-表单元素单选按钮
-
-### 导入组件
-
-```javascript
-components: {
-    'bui-radio': buiweex.buiRadio
-}
-
-```
-
-### 使用
+### 用法
 
 ```html
 <bui-radio :items="radioItems" direction="horizontal" @change="radioChange" ></bui-radio>
 ```
 
 ```javascript
-data: function () {
+data () {
     return {
-        "radioItems": [
-            {
-                title: "男", //文本
-                select: true, //表明是否是选中项, true为选中、false为不选中
-                value: "1"
-            },
-            {
-                title: "女",
-                select: false,
-                value: "0"
-            }
+        selectedValue:"2",
+        items:[
+            {value:"1",title:'全部'},
+            {value:"2",title:'选项一'},
+            {value:"3",title:'选项二'},
+            {value:"4",title:'选项三'}
         ]
     }
 },
 methods: {
-    "radioChange": function (item) {
-	  //当前选中的item
-        console.log(item);
+    changeValue(value){
+        this.$toast(value);
     }
 }
 
 ```
+Example: [bui-radio](https://github.com/bingo-oss/bui-weex-sample/blob/master/src/views/example/radio-demo.vue)
+
 
 ### 属性
 
-* `items` 赋值单选组数据列表，传一个数组，单个数组的属性如下：
+| Prop | Type | Required | Default | Description |
+| ---- |:----:|:---:|:-------:| :----------:|
+| **`value`** | `string` | `Y` |  | 可使用`v-model`双向绑定数据 |
+| **`items`** | `array` | `Y` |  | 数据项|
+| **`direction `** | `string` | `N` | `horizontal` | 方向: `horizontal vertical` |
+| **`fontSize`** | `number` | `N` | `48` | 大小 |
+| **`iconSize`** | `number` | `N` | `32` | 大小 |
+| **`selectedColor`** | `string` | `N` | `#00cc66` | 颜色 |
+| **`unSelectedColor`** | `string` | `N` | `#9ea7b4` | 颜色 |
 
-  * title ：单选文本
-
+`items`: 赋值单选组数据列表，传一个数组，单个数组的属性如下：
+  * value ：单选项值
+  * title ：单选项文本
   * disabled ：表明是否激活按钮, true为激活、false为不激活、默认值为false
-
-  * select ：表明是否是选中项, true为选中、false为不选中
-
-  * value ：表单的value
-
-* `direction ` ：单选表单组布局控制，水平为 horizontal（默认),竖直为 vertical 
 
 ### 事件
 
-* `@change` ：选中时触发的事件，返回选中的对象，包含属性如下：
-  * title ：单选文本
-  * disabled ：表明是否激活按钮, true为激活、false为不激活、默认值为false
-  * select ：表明是否是选中项, true为选中、false为不选中
-  * value ：表单的value
-
-
-
+* `@change` ：选中时触发的事件，返回选中的value

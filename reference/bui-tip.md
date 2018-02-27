@@ -1,19 +1,8 @@
-## 提示条 \(bui-tip\)
+## 提示 \(bui-tip\)
 
-用于在页面上作提示内容，默认提供了几种类型：
+### 用法
 
-### 导入组件
-
-```javascript
-components: {
-   'bui-tip': buiweex.buiTip
-}
-
-```
-
-### 使用
-
-`value` 提示条的文本内容，参考如下：
+`value` 提示的文本内容，参考如下：
 
 ```html
 <bui-tip value="This is success tip."></bui-tip>
@@ -27,6 +16,11 @@ components: {
 <bui-tip type="warning" value="bui-weex warning tip."></bui-tip>
 <bui-tip type="danger" value="bui-weex 是专门为weex开发者打造的高质量UI组件"></bui-tip>
 ```
+Example: [bui-tip](https://github.com/bingo-oss/bui-weex-sample/blob/master/src/views/example/tip-demo.vue)
 
+### 属性
 
-
+| Prop | Type | Required | Default | Description |
+| ---- |:----:|:---:|:-------:| :----------:|
+| **`type`** | `string` | `N` | `success` | 支持info,warning,danger,success |
+| **`value`** | `string` | `N` |  | 文本内容|

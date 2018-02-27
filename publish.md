@@ -6,13 +6,15 @@
 
 ## 打包
 
-运行 publish 命令，该命令会从dist目录中抽取出提供给 android 和 iOS平台用的 Bundle资源 。在工程根目录下生成 `publish` 文件夹，里面便是最后打包出来的Bundle资源，里面只保留了 `*.weex.js`。
+运行 publish 命令，该命令会从dist目录中抽取出提供给 android 和 iOS平台用的 Bundle资源 。在工程根目录下生成 `publish` 文件夹(只保留了 `*.weex.js`)
 
 ``` bash
-npm run pubsh
+npm run publish
 
 ```
 
-打开publish目录：
+运行命令 publish：
 
 ![](assets/dev5.png)
+
+其中, publish 文件夹 和 publish.zip 就是最后产出的 bundle。
