@@ -2,6 +2,8 @@
 
 框架提供两个搜索框布局，一个是搜索位于中间布局 `bui-searchbar-center` ，一个是搜索位于左边布局 `bui-searchbar-left`。
 
+![](../assets/gif/search.gif)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/search.png" alt="" width="120px">
+
 ### 用法
 
 ```html

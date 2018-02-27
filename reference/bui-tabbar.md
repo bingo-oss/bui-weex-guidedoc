@@ -1,5 +1,7 @@
 ## 选项卡(bui-tabbar)
 
+![](../assets/gif/tabbar.gif)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/tabbar.png" alt="" width="120px">
+
 ### 用法
 
 选项卡的实现使用方式：bui-tabbar + slider，充分利用slider的滑动特性。

@@ -1,5 +1,7 @@
 ## 图片 \(bui-image\)
 
+![](../assets/gif/pic.gif)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/img.png" alt="" width="120px">
+
 ### 用法
 
 加载远程图片

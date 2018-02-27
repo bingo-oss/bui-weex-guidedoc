@@ -1,5 +1,7 @@
 ## 弹出框 (bui-dialog)
 
+![](../assets/gif/dialog.gif)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/dialog.png" alt="" width="120px">
+
 ### 用法
 
 ```html

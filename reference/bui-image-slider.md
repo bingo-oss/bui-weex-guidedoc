@@ -1,5 +1,7 @@
 ## 图片轮播(bui-image-slider)
 
+![](../assets/gif/slider.gif)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/slider.png" alt="" width="120px">
+
 ### 用法
 
 ```html

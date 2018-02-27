@@ -1,5 +1,8 @@
 ## 复选 (bui-checkbox)
 
+![](../assets/gif/checkbox.gif)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/checkbox.png" alt="" width="120px">
+
+
 ### 用法
 
 ```html

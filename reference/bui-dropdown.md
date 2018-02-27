@@ -1,5 +1,8 @@
 ## 下拉菜单 (bui-dropdown)
 
+![](../assets/gif/dropdown.gif)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/dropdown.png" alt="" width="120px">
+
+
 ### 用法
 
 下拉框的位置是根据触发元素的 event对象的 position 计算而来的。设置ref是为了在组件内部做动画效果。

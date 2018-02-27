@@ -1,3 +1,16 @@
+<p style="
+    text-align: center;
+"><img src="assets/logo.png" alt="" width="300px"></p>
+
+
+<p>
+<a href="https://github.com/bingo-oss/bui-weex/commits/dev" target="_blank"><img src="https://img.shields.io/github/last-commit/bingo-oss/bui-weex.svg?style=flat-square" data-origin="https://img.shields.io/github/last-commit/bingo-oss/bui-weex.svg?style=flat-square" alt="GitHub last commit"></a>
+<a href="https://www.npmjs.com/package/bui-weex" target="_blank"><img src="https://img.shields.io/npm/v/bui-weex.svg?maxAge=3600&amp;style=flat-square" data-origin="https://img.shields.io/npm/v/bui-weex.svg?maxAge=3600&amp;style=flat-square" alt="npm"></a>
+<a href="https://www.npmjs.com/package/bui-weex" target="_blank"><img src="https://img.shields.io/npm/dm/bui-weex.svg?style=flat-square" data-origin="https://img.shields.io/npm/dm/bui-weex.svg?style=flat-square" alt="NPM downloads"></a>
+<a href="https://www.npmjs.com/package/bui-weex" target="_blank"><img src="https://img.shields.io/npm/dt/bui-weex.svg?style=flat-square" data-origin="https://img.shields.io/npm/dt/bui-weex.svg?style=flat-square" alt="NPM all downloads"></a>
+<a href="https://github.com/bingo-oss/bui-weex/issues?utf8=%E2%9C%93&amp;q=" target="_blank"><img src="https://img.shields.io/github/issues-closed/bingo-oss/bui-weex.svg?style=flat-square" data-origin="https://img.shields.io/github/issues-closed/bingo-oss/bui-weex.svg?style=flat-square" alt="GitHub closed issues"></a>
+</p>
+
 ## BUI-Weex概述
 
 BUI-Weex 是一套专门为[ Weex ](http://weex-project.io/cn/)前端开发者打造的一套高质量UI框架。为了达到更好的效果，请在 `WeexSDK 0.11.0 +` 上使用这套UI框架。BUI-Weex致力于为`iOS`和`android`平台提供丰富的UI组件，帮助开发者快速构建移动应用。

@@ -1,6 +1,8 @@
 ## 富文本(bui-richcell)
 目前组件支持 文本，图标，图片的混合展示。对于较长的文本，暂时无法自动换行。
 
+![](../assets/gif/richcell.png)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/richcell.png" alt="" width="120px">
+
 ### 用法
 
 ```html

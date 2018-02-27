@@ -2,6 +2,9 @@
 
 框架基于开源字体图标库：[http://ionicons.com/](http://ionicons.com/)
 
+![](../assets/gif/icon.png)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/icon.png" alt="" width="120px">
+
+
 ### 用法
 
 ```html

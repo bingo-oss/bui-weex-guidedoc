@@ -1,5 +1,8 @@
 ## 面板 (bui-panel)
 
+![](../assets/gif/panel.png)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/panel.png" alt="" width="120px">
+
+
 ### 用法
 
 ```html

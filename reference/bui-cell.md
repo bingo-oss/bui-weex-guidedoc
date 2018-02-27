@@ -2,6 +2,9 @@
 
 bui-cell 可用于表单展示，也可以用在列表中，一个单元格分为 4个内容区域：
 
+![](../assets/gif/cell.gif)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/cell.png" alt="" width="120px">
+
+
 ### 用法
 
 ```html

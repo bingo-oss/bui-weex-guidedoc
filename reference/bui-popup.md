@@ -1,5 +1,7 @@
 ## 弹出层 (bui-popup)
 
+![](../assets/gif/popup.gif)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/popup.png" alt="" width="120px">
+
 ### 用法
 
 ```html

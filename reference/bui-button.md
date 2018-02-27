@@ -1,5 +1,7 @@
 ## 按钮 \(bui-button\)
 
+![](../assets/gif/btn.gif)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/btn.png" alt="" width="120px">
+
 ### 用法
 
 ```html

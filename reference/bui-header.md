@@ -1,5 +1,8 @@
 ## 标题栏 \(bui-header\)
 
+![](../assets/gif/header.gif)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/header.png" alt="" width="120px">
+
+
 ### 用法
 
 ```html

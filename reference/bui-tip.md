@@ -1,5 +1,8 @@
 ## 提示 \(bui-tip\)
 
+
+![](../assets/gif/tip.png)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/tip.png" alt="" width="120px">
+
 ### 用法
 
 `value` 提示的文本内容，参考如下：

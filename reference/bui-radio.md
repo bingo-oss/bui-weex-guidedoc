@@ -1,5 +1,7 @@
 ## 单选 (bui-radio)
 
+![](../assets/gif/radio.gif)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/radio.png" alt="" width="120px">
+
 ### 用法
 
 ```html

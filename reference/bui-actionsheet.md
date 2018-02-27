@@ -1,5 +1,8 @@
 ## 上拉菜单 (bui-actionsheet)
 
+![](../assets/gif/actionsheet.gif)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/actionsheet.png" alt="" width="120px">
+
+
 ### 用法
 
 ```html

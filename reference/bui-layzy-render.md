@@ -1,5 +1,8 @@
 ## 懒加载组件 \(bui-lazy-render\)
 
+![](../assets/gif/lazy.gif)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/lazy.png" alt="" width="120px">
+
+
 ### 用法
 
 ```html
