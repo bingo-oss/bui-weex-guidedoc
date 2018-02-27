@@ -6,7 +6,9 @@ Weex支持`盒模型`和`Flexbox`布局，都是基于CSS的标准来实现的�
 
 #### 弹性盒子
 
-框架提供了一组class，分别是 `span1 ~ span12`,定义 flex成员可以占用容器剩余空间的大小。注意区别于web层面的12栅格布局，这里仅仅是 原生层面 布局权重(`layout_weight`)的概念。
+框架提供了一组class，分别是 `span1 ~ span12`,定义 flex成员可以占用容器剩余空间的大小。注意区别于web层面的12栅格布局，这里仅仅是 原生层面 布局权重(`layout_weight`)的概念。如下图：
+
+![](../assets/1.gif)
 
 ```html
 <div>
