@@ -16,7 +16,7 @@ export default {
     data: function () {
         return {
             leftItem: {
-                icon: 'icon-back',
+                icon: 'ion-chevron-left',
             },
             rightItem: {
                 text: '更多'
