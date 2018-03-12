@@ -16,18 +16,17 @@ html, body, .bui-box {
   background-image: url("../images/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center; }
+  position: relative; }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column; }
+  position: absolute;
+  width: 500px;
+  height: 280px;
+  margin-left: -250px;
+  margin-top: -140px;
+  left: 50%;
+  top: 50%;
+  text-align: center; }
 
 .logo .title {
   margin: 20px auto 70px auto;
@@ -47,53 +46,54 @@ html, body, .bui-box {
   font-weight: normal;
   margin-bottom: 60px; }
 
-.nav li {
-  display: inline-block; }
-  .nav li a {
-    font-size: 16px;
-    display: inline-block;
-    padding: 10px;
-    position: relative;
-    color: #41a2f3;
-    text-decoration: none;
-    transition: color .3s; }
-    .nav li a span {
-      width: 16px;
-      height: 16px;
+.nav {
+  display: flex; }
+  .nav li {
+    flex: 1; }
+    .nav li a {
+      font-size: 16px;
       display: inline-block;
-      background: url("../images/githup.png") no-repeat left center;
-      margin-right: 5px; }
-    .nav li a:hover, .nav li a.link {
-      color: #495060; }
-
-.nav-index li a:before {
-  top: 0;
-  transform: translateY(-10px); }
-.nav-index li a:after {
-  bottom: 0;
-  transform: translateY(10px); }
-.nav-index li a:before, .nav-index li a:after {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: #fff;
-  content: "";
-  opacity: 0;
-  transition: opacity .3s, transform .3s;
-  transform: translateY(-10px); }
-.nav-index li a:hover {
-  color: #ffffff; }
-  .nav-index li a:hover span {
-    background: url("../images/githup-white.png") no-repeat left center; }
-.nav-index li a:hover:after, .nav-index li a:hover:before {
-  opacity: 0.3;
-  transform: translateY(0); }
+      padding: 10px;
+      position: relative;
+      color: #41a2f3;
+      text-decoration: none;
+      transition: color .3s; }
+      .nav li a span {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background: url("../images/githup.png") no-repeat left center;
+        margin-right: 5px; }
+      .nav li a:before {
+        top: 0;
+        transform: translateY(-10px); }
+      .nav li a:after {
+        bottom: 0;
+        transform: translateY(10px); }
+      .nav li a:before, .nav li a:after {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #fff;
+        content: "";
+        opacity: 0;
+        transition: opacity .3s, transform .3s;
+        transform: translateY(-10px); }
+      .nav li a:hover {
+        color: #ffffff; }
+        .nav li a:hover span {
+          background: url("../images/githup-white.png") no-repeat left center; }
+      .nav li a:hover:after, .nav li a:hover:before {
+        opacity: 0.3;
+        transform: translateY(0); }
 
 .footer {
   position: absolute;
-  text-align: center;
-  bottom: 20px; }
+  width: 500px;
+  left: 50%;
+  margin-left: -250px;
+  bottom: 30px; }
   .footer p {
     color: #989898;
     font-size: 12px;
@@ -105,100 +105,5 @@ html, body, .bui-box {
   left: 0;
   top: 0;
   z-index: 0; }
-
-.fr {
-  float: right; }
-
-.fl {
-  float: left; }
-
-.bui-header {
-  background: #ffffff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 20px 30px;
-  border-bottom: 2px solid #efefef; }
-  .bui-header .bui-logo {
-    cursor: pointer; }
-    .bui-header .bui-logo .bui-logo-title {
-      margin-top: 8px;
-      margin-left: 10px; }
-      .bui-header .bui-logo .bui-logo-title a {
-        text-decoration: none;
-        color: #495060; }
-  .bui-header .bui-case-nav {
-    float: right; }
-
-.togglenav {
-  display: none;
-  position: absolute;
-  right: 10px;
-  top: 25px;
-  cursor: pointer; }
-
-.main {
-  margin-top: 90px; }
-
-.caseList li {
-  width: 128px;
-  cursor: pointer; }
-  .caseList li img {
-    width: 128px;
-    height: 128px;
-    transition: all 0.3s ease; }
-    .caseList li img:hover {
-      transform: scale(1.1, 1.1); }
-  .caseList li span {
-    display: block;
-    text-align: center;
-    font-size: 14px; }
-    .caseList li span:hover {
-      color: #41a2f3; }
-
-.bui-tab-box {
-  z-index: 3;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0; }
-
-.layout {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7); }
-
-.bui-case-footer {
-  background: #212325;
-  color: #fff;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  padding: 10px 0px; }
-
-@media screen and (max-width: 900px) {
-  .togglenav {
-    display: block; }
-
-  .bui-header .bui-case-nav {
-    float: none; }
-    .bui-header .bui-case-nav .nav {
-      display: none;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 99px;
-      background: #fff; }
-      .bui-header .bui-case-nav .nav li {
-        display: block; }
-        .bui-header .bui-case-nav .nav li a {
-          display: block; } }
 
 /*# sourceMappingURL=index.css.map */

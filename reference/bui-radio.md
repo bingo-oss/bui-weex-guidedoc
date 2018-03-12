@@ -6,6 +6,7 @@
 
 ```html
 <bui-radio :items="radioItems" direction="horizontal" @change="radioChange" ></bui-radio>
+<bui-radio-list v-model="selectedValue" @change="changeValue" :items="items"></bui-radio-list>
 ```
 
 ```javascript

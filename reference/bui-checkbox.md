@@ -7,6 +7,7 @@
 
 ```html
 <bui-checkbox v-model="selectedValue" @change="changeValue"  direction="vertical" :items="items"></bui-checkbox>
+<bui-checkbox-list v-model="selectedValue" @change="changeValue" :items="items"></bui-checkbox-list>
 ```
 
 ```javascript

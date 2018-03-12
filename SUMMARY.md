@@ -32,6 +32,8 @@
   * [懒加载\(bui-layzy-render\)](reference/bui-layzy-render.md)
   * [图片轮播\(bui-image-slider\)](reference/bui-image-slider.md)
   * [富文本\(bui-richcell\)](reference/bui-richcell.md)
+  * [多格筛选\(bui-grid-select\)](reference/bui-grid-select.md)
+  * [流程图\(bui-flow\)](reference/bui-flow.md)
 * 版本升级
   * [0.2.X](update/0.2.X.md) 
 * [Weex项目集成 BUI-Weex](integration.md)
