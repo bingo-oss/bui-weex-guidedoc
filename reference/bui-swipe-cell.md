@@ -7,27 +7,23 @@
 
 ```html
 <text class="h4 titleEx">简单滑动菜单-手势向左边滑动,菜单按钮操作</text>
-<bui-swipe-cell @clickmenu="clickmenu"
-    :items="btnAry1"
-    :title="'阿农之家'"></bui-swipe-cell>
+<bui-swipe-cell @actionClick="clickmenu"
+                :items="btnAry1"
+                :title="'腾讯新闻-今日头条'"></bui-swipe-cell>
 <text class="h4 titleEx mT50">滑动菜单-高度设置</text>
-<bui-swipe-cell @clickmenu="clickmenu"
-    :height="'150px'"
-    :items="btnAry1"
-    :title="'千手观音剁手'"></bui-swipe-cell>
+<bui-swipe-cell @actionClick="clickmenu"
+                :height="'150px'"
+                :items="btnAry1"
+                :title="'腾讯新闻-今日头条'"></bui-swipe-cell>
 <text class="h4 titleEx mT50">场景1-组件扩展案例</text>
 <bui-swipe-cell :items="btnAry1"
-    :title="'樊登读书会'">
-<text slot="content">--扩展部分--</text>
+                :title="'腾讯新闻-今日头条'">
+    <text slot="content">--腾讯新闻-今日头条--</text>
 </bui-swipe-cell>
 <text class="h4 titleEx mT50">场景2-与列表结合案例</text>
 <div v-for="(i, index) in items" :key="index">
-<bui-swipe-cell :items="btnAry"
-        :title="i.title"
-        :index="index"
-        ref="swipebtn"
-        @swipe="setkey"
-        @click="closeswipe"></bui-swipe-cell>
+    <bui-swipe-cell :items="btnAry"
+                    :title="i.title"></bui-swipe-cell>
 </div>
 ```
 
@@ -71,8 +67,7 @@ data: function () {
 	        {
 	            'title':'云应用平台'
 	        }
-	    ],
-	    indexkey: '',
+	    ]
     }
 },
 methods: {
@@ -82,13 +77,6 @@ methods: {
         }else if(e == 1){
             this.$toast(this.btnAry1[e-0].title);
         }
-    },
-    setkey(e){
-        if(this.indexkey.length != 0 && this.indexkey != e) this.$refs.swipebtn[this.indexkey-0].close();
-        this.indexkey = e;
-    },
-    closeswipe(){
-        this.$refs.swipebtn[this.indexkey-0].close();
     }
 }
 ```
@@ -102,7 +90,6 @@ Example:[bui-swipe-cell](https://github.com/bingo-oss/bui-weex-sample/blob/maste
 | **`items`** | `array ` | `Y` | | 滑动菜单按钮数据项 |
 | **`title`** | `string ` | `N` | | 左边标题内容 |
 | **`height`** | `string ` | `N` | `100px` | 高度 |
-| **`index`** | `string` | `N` | | 脚标指数 |
 
 `items`: 赋值单选组数据列表，传一个数组，单个数组的属性如下：
 
@@ -127,6 +114,6 @@ Example:[bui-swipe-cell](https://github.com/bingo-oss/bui-weex-sample/blob/maste
 
 ### 事件
 
-* `@clickmenu`:点击滑动菜单按钮触发的事件，返回按钮的index
-* `@click`:点击滑动内容块触发的事件，返回index
-* `@swipe`: 向左滑动时触发的事件，返回index
+* `@actionClick`:点击滑动菜单按钮触发的事件，返回按钮的index
+* `@click`:点击滑动内容块触发的事件
+* `@swipe`: 向左滑动时触发的事件
