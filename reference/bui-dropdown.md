@@ -11,7 +11,7 @@
 <div class="center" style="padding: 10px">
     <bui-button type="warning" value="打开下拉菜单" @click="open"></bui-button>
 </div>
-<bui-dropdown v-model="showDropdown" ref="dropdown" :center=true>
+<bui-dropdown v-model="showDropdown" ref="dropdown" :center=true :up=true>
     <bui-cell title="娱乐新闻"></bui-cell>
     <bui-cell title="体育新闻"></bui-cell>
     <bui-cell title="社交媒体"></bui-cell>
@@ -46,6 +46,7 @@ Example: [bui-dropdown](https://github.com/bingo-oss/bui-weex-sample/blob/master
 | **`bgColor`** | `string` | `N` | `#ffffff` | 背景颜色 |
 | **`center`** | `boolean` | `N` | `false` | 箭头显示位置,false表示在左边，true在中间 |
 | **`autoWidth`** | `boolean` | `N` | `true` | 自动适配触发控件宽度，false时候固定260px|
+| **`up`** | `boolean` | `N` | `false` | 气泡向上动画，默认是向下 |
 
 
 ### 方法

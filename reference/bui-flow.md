@@ -65,8 +65,8 @@ Example:[bui-flow](https://github.com/bingo-oss/bui-weex-sample/blob/master/src/
 
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| **`items`** | `array` | `Y` |  | 流程图数据元素 |
-| **`customStyles`** | `object` | `N` |  | 高亮标题，高亮节点`highlightTitleColor`, `highlightPointInnerColor`, `highlightPointBorderColor` |
+| **`items`** | `array` | `Y` |  | 流程图数据项 |
+| **`customStyles`** | `object` | `N` |  | 自定义属性 |
 
 `items`: 赋值单选组数据列表，传一个数组，单个数组的属性如下：
 
@@ -76,6 +76,14 @@ Example:[bui-flow](https://github.com/bingo-oss/bui-weex-sample/blob/master/src/
   * highlight ：表明该选项是否为节点高亮, true为流程图节点高亮、false为流程图节点不高亮、默认值为false
 
 
+`customStyles `: 自定义属性，传一个对象，属性如下：
+
+  * lineColor ：线条色
+  * pointInnerColor ：正常节点背景色
+  * pointBorderColor ：正常节点边框色
+  * highlightTitleColor ：高亮状态文字色
+  * highlightPointInnerColor ：高亮状态节点背景色
+  * highlightPointBorderColor ：高亮状态节点边框色
 
 ### 事件
 

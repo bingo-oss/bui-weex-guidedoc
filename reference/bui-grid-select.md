@@ -132,18 +132,29 @@ Example:[bui-grid-select](https://github.com/bingo-oss/bui-weex-sample/blob/mast
 
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| **`items`** | `array ` | `Y` |  | 多格组件数据 |
+| **`items`** | `array ` | `Y` | | 多格筛选数据项 |
 | **`single`** | `boolean` | `N` | `false` | 单项选择 |
 | **`limit`** | `number` | `N` |  | 多项选择时的选择项的上限个数 |
-| **`cols`** | `string``number ` | `N` | `4` | 列数默认是4列 |
-| **`customStyles`** | `object` | `N` |  | `width``height``color``selectedColor``disabledColor``borderColor``selectedBorderColor``backgroundColor``selectedBackgroundColor` |
+| **`cols`** | `string``number ` | `N` | `4` | 列数 |
+| **`customStyles`** | `object` | `N` |  | 自定义属性 |
 
 `items`: 赋值单选组数据列表，传一个数组，单个数组的属性如下：
 
   * title ：选项文本
   * selected ：表明该选项是否为选中, true为选中、false为不选中、默认值为false
  
-  
+`customStyles `: 自定义属性，传一个对象，属性如下：
+
+  * width ：多格筛选单个宽度
+  * height ：多格筛选单个高度
+  * color ：正常状态文字色
+  * selectedColor ：选中状态文字色
+  * disabledColor ：不可选字体颜色
+  * borderColor ：正常状态边框色
+  * selectedBorderColor ：选中状态边框色
+  * backgroundColor ：正常状态背景色
+  * selectedBackgroundColor ：选中状态背景色 
+
 ### 事件
 
 * `@overLimit`:点击某项触发的事件，当超过上限数量时触发的事件，返回索引、文本
