@@ -1,6 +1,6 @@
 ## 滑动菜单 (bui-swipe-cell)
 
-![](../assets/gif/gridselect.gif)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/gridselect.png" alt="" width="120px">
+![](../assets/gif/swipecell.gif)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/swipecell.png" alt="" width="120px">
 
 
 ### 用法
