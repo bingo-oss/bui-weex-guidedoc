@@ -21,6 +21,7 @@
   * [标题栏\(bui-header\)](reference/bui-header.md)
   * [搜索框\(bui-search\)](reference/bui-search.md)
   * [列表\(bui-list\)](reference/bui-list.md)
+  * [滑动菜单\(bui-swipe-cell\)](reference/bui-swipe-cell.md)
   * [选项卡\(bui-tabbar\)](reference/bui-tabbar.md)
   * [单元格\(bui-cell\)](reference/bui-cell.md)
   * [单选\(bui-radio\)](reference/bui-radio.md)
