@@ -148,14 +148,14 @@ Example:[bui-grid-select](https://github.com/bingo-oss/bui-weex-sample/blob/mast
   * width ：多格筛选单个宽度
   * height ：多格筛选单个高度
   * color ：正常状态文字色
-  * selectedColor ：选中状态文字色
-  * disabledColor ：不可选字体颜色
-  * borderColor ：正常状态边框色
-  * selectedBorderColor ：选中状态边框色
-  * backgroundColor ：正常状态背景色
-  * selectedBackgroundColor ：选中状态背景色 
+  * selectedColor ：选中状态文字色，默认为`#3399ff`
+  * disabledColor ：不可选字体颜色，默认为`#9b9b9b`
+  * borderColor ：正常状态边框色，默认为是透明
+  * selectedBorderColor ：选中状态边框色，默认为`#3399ff`
+  * backgroundColor ：正常状态背景色，默认为`#f6f6f6`
+  * selectedBackgroundColor ：选中状态背景色 ，默认为`#ffffff`
 
 ### 事件
 
-* `@overLimit`:点击某项触发的事件，当超过上限数量时触发的事件，返回索引、文本
-* `@select`:点击某项触发的事件，返回索引、文本
+* `@overLimit`:点击某项触发的事件，当超过上限数量时触发的事件，返回上限数量
+* `@select`:点击某项触发的事件，返回索引、当前选项的选择状态、当前索引选项

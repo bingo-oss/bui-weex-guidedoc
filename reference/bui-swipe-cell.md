@@ -116,4 +116,5 @@ Example:[bui-swipe-cell](https://github.com/bingo-oss/bui-weex-sample/blob/maste
 
 * `@actionClick`:点击滑动菜单按钮触发的事件，返回按钮的index
 * `@click`:点击滑动内容块触发的事件
-* `@swipe`: 向左滑动时触发的事件
+* `@swipeleft`: 向左滑动时触发的事件
+* `@swiperight`: 向右滑动时触发的事件
