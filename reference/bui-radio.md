@@ -42,6 +42,8 @@ Example: [bui-radio](https://github.com/bingo-oss/bui-weex-sample/blob/master/sr
 | **`iconSize`** | `number` | `N` | `32` | 大小 |
 | **`selectedColor`** | `string` | `N` | `#00cc66` | 颜色 |
 | **`unSelectedColor`** | `string` | `N` | `#9ea7b4` | 颜色 |
+| **`disabled`** | `boolean` | `N` | `false` | 是否激活单选 `true` `false` |
+| **`textDirection`** | `string ` | `N` | `right` | 文字布局是左右`right``left` |
 
 `items`: 赋值单选组数据列表，传一个数组，单个数组的属性如下：
   * value ：单选项值
