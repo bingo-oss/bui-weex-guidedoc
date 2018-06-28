@@ -2,7 +2,7 @@
 
 ### 可扩展流程图
 
-![](../assets/gif/timeline.gif)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/timeline.png" alt="" width="120px">
+![](../assets/gif/timeline.jpg)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/timeline.png" alt="" width="120px">
 
 
 ### 用法

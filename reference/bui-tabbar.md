@@ -1,6 +1,16 @@
-## 选项卡(bui-tabbar)
+## 选项卡(bui-tabbar | bui-tabbar-scroller)
+有两种形式，用法相同，如下：
+
+* bui-tabbar 选项卡
 
 ![](../assets/gif/tabbar.gif)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/tabbar.png" alt="" width="120px">
+
+* bui-tabbar-scroller 横向滚动选项卡
+
+![](../assets/gif/tabbar-scroller.gif)&nbsp;&nbsp;&nbsp;<img src="../assets/qrcode/tabbar-scroller.png" alt="" width="120px">
+
+
+
 
 ### 用法
 
@@ -82,6 +92,7 @@ module.exports = {
 Example: [bui-tabbar](https://github.com/bingo-oss/bui-weex-sample/blob/master/src/views/example/tabbar-demo.vue)
 
 ### 属性
+* `bui-tabbar`与`bui-tabbar-scroller`
 
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
@@ -98,6 +109,12 @@ Example: [bui-tabbar](https://github.com/bingo-oss/bui-weex-sample/blob/master/s
 | **`showSelectedLine`** | `bool` | `N` | false | 选中项底部显示边框 |
 | **`containerStyle`** | `object` | `N` |  | 外层容器扩展样式 |
 | **`itemStyle`** | `object` | `N` |  | 每个item扩展样式 |
+
+* `bui-tabbar-scroller`
+
+| Prop | Type | Required | Default | Description |
+| ---- |:----:|:---:|:-------:| :----------:|
+| **`width`** | `number` | `Y` | `150` | 每个tab的宽度，满屏是width=750/tab个数，滚动屏就width>750/tab个数 |
 
 
 ### 事件

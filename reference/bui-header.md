@@ -52,6 +52,7 @@ Example:[bui-header](https://github.com/bingo-oss/bui-weex-sample/blob/master/sr
 | **`iconSize`** | `string` | `N` | `48px` | 图标大小|
 | **`backgroundColor`** | `string` | `N` | `#4ca4fe` | 背景颜色 |
 | **`height`** | `string` | `N` | `90px` | 头部高度 |
+| **`useDefaultReturn`** | `Boolean` | `N` | `true` | 是否使用默认的返回 |
 
 defaultItem = `{ icon: '',text: ''}` ,其中 icon 是字体图标的name，从ionicons寻找合适的进行填充，text是文本内容，例如'返回'，icon在左，text在右。
 
