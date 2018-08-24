@@ -25,5 +25,5 @@ Example:[bui-icon](https://github.com/bingo-oss/bui-weex-sample/blob/master/src/
 
 ### 查找
 
-<iframe src="http://ionicons.com/" style="border:none;width:100%;height:12000px">
+<iframe src="http://dev.bingocc.com/bui-weex-icon/index.html" style="border:none;width:100%;height:12000px">
 
